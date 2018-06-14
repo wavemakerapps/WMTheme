@@ -1,0 +1,20 @@
+<wm-page data-ng-controller="MainPageController" pagetitle="Main" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-page-content columnwidth="12" name="page_content1"> 
+            <wm-list listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-3 lg-4" class="list-card" dataset="bind:Variables.userInterfaceCategory.dataSet" navigation="None" name="UICardList" title="" groupby="category"> 
+                <wm-listtemplate layout="media" name="listtemplate"> 
+                    <wm-card name="UICard" iconclass="" picturesource="bind:&quot;resources/images/imagelists/screenshot/&quot; + Variables.userInterfaceCategory.dataSet[$i].thumbnail
+" title="" margin="1em unset" on-click="UICardClick($event, $scope, item, currentItemWidgets)" imageheight="200px" class="category-card"> 
+                        <wm-card-content name="cardContent"> 
+                            <wm-anchor name="cardTitle" caption="bind:Variables.userInterfaceCategory.dataSet[$i].label" iconclass="bind:Variables.userInterfaceCategory.dataSet[$i].icon" class="card-heading" hyperlink="bind:Variables.userInterfaceCategory.dataSet[$i].link"></wm-anchor> 
+                            <wm-label caption="bind:Variables.userInterfaceCategory.dataSet[$i].description" class="p" name="cardDescription" hint="bind:Variables.userInterfaceCategory.dataSet[$i].description" margin="6px unset unset unset"></wm-label> 
+                        </wm-card-content> 
+                    </wm-card> 
+                </wm-listtemplate> 
+            </wm-list> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>
