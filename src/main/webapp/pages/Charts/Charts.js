@@ -1,8 +1,10 @@
-Application.$controller("ChartsPageController", ["$scope", function($scope) {
+Application.$controller("ChartsPageController", ["$scope", "$location", function($scope, $location) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
     $scope.onPageReady = function() {
+        console.log($location);
+        debugger
         /*
          * variables can be accessed through '$scope.Variables' property here
          * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script

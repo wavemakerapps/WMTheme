@@ -152,6 +152,10 @@
     "properties" : [ ],
     "relatedTables" : [ ],
     "filterFields" : { },
-    "package" : "com.hrdb.Department"
+    "package" : "com.hrdb.Department",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   }
 }

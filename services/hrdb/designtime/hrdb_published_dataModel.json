@@ -1,4 +1,5 @@
 {
+  "cascadeEnabled" : false,
   "description" : null,
   "draft" : false,
   "name" : "hrdb",
@@ -721,6 +722,7 @@
     },
     "relations" : [ {
       "cardinality" : "ManyToOne",
+      "cascadeEnabled" : true,
       "cascadeOptions" : {
         "cascadeRemove" : "REMOVE",
         "cascadeReplace" : false
@@ -732,6 +734,7 @@
         "columnsFilter" : [ ]
       },
       "fieldName" : "employee",
+      "ignored" : false,
       "mappings" : [ {
         "sourceColumn" : "EMP_ID",
         "targetColumn" : "EMP_ID"
@@ -747,6 +750,7 @@
       "sourceTable" : "VACATION",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "EMPLOYEE",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "PUBLIC",
@@ -1239,6 +1243,7 @@
     },
     "relations" : [ {
       "cardinality" : "ManyToOne",
+      "cascadeEnabled" : true,
       "cascadeOptions" : {
         "cascadeRemove" : "REMOVE",
         "cascadeReplace" : false
@@ -1250,6 +1255,7 @@
         "columnsFilter" : [ ]
       },
       "fieldName" : "department",
+      "ignored" : false,
       "mappings" : [ {
         "sourceColumn" : "DEPT_ID",
         "targetColumn" : "DEPT_ID"
@@ -1265,9 +1271,11 @@
       "sourceTable" : "EMPLOYEE",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "DEPARTMENT",
+      "valid" : true,
       "virtual" : false
     }, {
       "cardinality" : "ManyToOne",
+      "cascadeEnabled" : true,
       "cascadeOptions" : {
         "cascadeRemove" : "REMOVE",
         "cascadeReplace" : false
@@ -1279,6 +1287,7 @@
         "columnsFilter" : [ ]
       },
       "fieldName" : "employeeByManagerId",
+      "ignored" : false,
       "mappings" : [ {
         "sourceColumn" : "MANAGER_ID",
         "targetColumn" : "EMP_ID"
@@ -1294,6 +1303,7 @@
       "sourceTable" : "EMPLOYEE",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "EMPLOYEE",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "PUBLIC",

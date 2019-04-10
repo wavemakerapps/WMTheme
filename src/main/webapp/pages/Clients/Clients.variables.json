@@ -152,7 +152,11 @@
     "properties" : [ ],
     "relatedTables" : [ ],
     "filterFields" : { },
-    "package" : "com.hrdb.Department"
+    "package" : "com.hrdb.Department",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   },
   "ContactsData" : {
     "_id" : "wm-HrdbEmployeeData1-wm.LiveVariable-1483528094550",
@@ -849,6 +853,10 @@
       "package" : "com.hrdb.Employee"
     } ],
     "filterFields" : { },
-    "package" : "com.hrdb.Employee"
+    "package" : "com.hrdb.Employee",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   }
 }

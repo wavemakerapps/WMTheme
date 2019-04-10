@@ -14,23 +14,23 @@
                                     <wm-filter-field name="empId" field="empId" displayname="Emp Id" widget="number" is-range="false" type="integer" is-primary-key="true" generator="identity" show="true" inputtype="number" key="empId" placeholder="Enter value"></wm-filter-field> 
                                 </wm-gridcolumn> 
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn17_1"> 
-                                    <wm-filter-field name="department" field="department" displayname="Department" widget="autocomplete" lookup-type="Department" lookup-field="name" is-related="true" related-entity-name="Department" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" key="department" placeholder="Enter value" datafield="key" searchkey="value" displaylabel="value" matchmode="start"></wm-filter-field> 
+                                    <wm-filter-field name="department" field="department" displayname="Department" widget="autocomplete" lookup-type="Department" lookup-field="name" is-related="true" related-entity-name="Department" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" key="department" placeholder="Enter value" datafield="key" searchkey="value" displaylabel="value" matchMode="startignorecase"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                             <wm-gridrow name="gridrow9"> 
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn19_1"> 
-                                    <wm-filter-field name="lastname" field="lastname" displayname="Lastname" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="lastname" placeholder="Enter value" matchmode="start"></wm-filter-field> 
+                                    <wm-filter-field name="lastname" field="lastname" displayname="Lastname" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="lastname" placeholder="Enter value" matchMode="startignorecase"></wm-filter-field> 
                                 </wm-gridcolumn> 
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn18_1"> 
-                                    <wm-filter-field name="firstname" field="firstname" displayname="Firstname" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="firstname" placeholder="Enter value" matchmode="start"></wm-filter-field> 
+                                    <wm-filter-field name="firstname" field="firstname" displayname="Firstname" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="firstname" placeholder="Enter value" matchMode="startignorecase"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                             <wm-gridrow name="gridrow1"> 
                                 <wm-gridcolumn name="gridcolumn1" columnwidth="6"> 
-                                    <wm-filter-field name="jobTitle" field="jobTitle" related-field="Job Title" widget="autocomplete" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchmode="start" inputtype="text" displayname="Job Title" key="jobTitle" placeholder="Enter value"></wm-filter-field> 
+                                    <wm-filter-field name="jobTitle" field="jobTitle" related-field="Job Title" widget="autocomplete" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchMode="startignorecase" inputtype="text" displayname="Job Title" key="jobTitle" placeholder="Enter value"></wm-filter-field> 
                                 </wm-gridcolumn> 
                                 <wm-gridcolumn name="gridcolumn2" columnwidth="6"> 
-                                    <wm-filter-field name="role" field="role" related-field="Role" widget="autocomplete" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchmode="start" inputtype="text" displayname="Role" key="role" placeholder="Enter value"></wm-filter-field> 
+                                    <wm-filter-field name="role" field="role" related-field="Role" widget="autocomplete" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchMode="startignorecase" inputtype="text" displayname="Role" key="role" placeholder="Enter value"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                         </wm-layoutgrid> 
@@ -65,27 +65,27 @@
                         <wm-layoutgrid name="layoutgrid4"> 
                             <wm-gridrow name="gridrow6"> 
                                 <wm-gridcolumn show="show" name="gridcolumn6" columnwidth="12"> 
-                                    <wm-filter-field name="department" field="department" displayname="Department" widget="number" is-range="false" lookup-type="Department" lookup-field="deptId" placeholder="" multiple="multiple" type="integer" step="1" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" is-related="true" related-entity-name="Department"></wm-filter-field> 
+                                    <wm-filter-field name="department" field="department" displayname="Department" widget="number" is-range="false" lookup-type="Department" lookup-field="deptId" placeholder="" multiple type="integer" step="1" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" is-related="true" related-entity-name="Department"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                             <wm-gridrow name="gridrow7"> 
                                 <wm-gridcolumn show="show" name="gridcolumn7" columnwidth="12"> 
-                                    <wm-filter-field name="employeeByManagerId" field="employeeByManagerId" displayname="Employee By Manager Id" widget="number" is-range="false" lookup-type="Employee" lookup-field="empId" placeholder="" multiple="multiple" type="integer" step="1" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" is-related="true" related-entity-name="Employee"></wm-filter-field> 
+                                    <wm-filter-field name="employeeByManagerId" field="employeeByManagerId" displayname="Employee By Manager Id" widget="number" is-range="false" lookup-type="Employee" lookup-field="empId" placeholder="" multiple type="integer" step="1" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" is-related="true" related-entity-name="Employee"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                             <wm-gridrow name="gridrow8"> 
                                 <wm-gridcolumn show="show" name="gridcolumn8" columnwidth="12"> 
-                                    <wm-filter-field name="empId" field="empId" displayname="Emp Id" widget="number" is-range="false" placeholder="" multiple="multiple" type="integer" step="1" is-primary-key="true" generator="identity" show="true" pc-display="true" mobile-display="true" is-related="false"></wm-filter-field> 
+                                    <wm-filter-field name="empId" field="empId" displayname="Emp Id" widget="number" is-range="false" placeholder="" multiple type="integer" step="1" is-primary-key="true" generator="identity" show="true" pc-display="true" mobile-display="true" is-related="false"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                             <wm-gridrow name="gridrow9"> 
                                 <wm-gridcolumn show="show" name="gridcolumn9" columnwidth="12"> 
-                                    <wm-filter-field name="firstname" field="firstname" displayname="Firstname" widget="text" is-range="false" placeholder="" multiple="multiple" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" is-related="false"></wm-filter-field> 
+                                    <wm-filter-field name="firstname" field="firstname" displayname="Firstname" widget="text" is-range="false" placeholder="" multiple type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" is-related="false"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                             <wm-gridrow name="gridrow10"> 
                                 <wm-gridcolumn show="show" name="gridcolumn10" columnwidth="12"> 
-                                    <wm-filter-field name="lastname" field="lastname" displayname="Lastname" widget="text" is-range="false" placeholder="" multiple="multiple" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" is-related="false"></wm-filter-field> 
+                                    <wm-filter-field name="lastname" field="lastname" displayname="Lastname" widget="text" is-range="false" placeholder="" multiple type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" is-related="false"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                         </wm-layoutgrid> 

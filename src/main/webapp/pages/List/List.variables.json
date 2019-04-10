@@ -694,7 +694,11 @@
       "package" : "com.hrdb.Employee"
     } ],
     "filterFields" : { },
-    "package" : "com.hrdb.Employee"
+    "package" : "com.hrdb.Employee",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   },
   "HrdbEmployeeDataContactLis" : {
     "_id" : "wm-HrdbEmployeeData-wm.LiveVariable-1484024230918",
@@ -1391,7 +1395,11 @@
       "package" : "com.hrdb.Employee"
     } ],
     "filterFields" : { },
-    "package" : "com.hrdb.Employee"
+    "package" : "com.hrdb.Employee",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   },
   "HrdbEmployeeDataEmailList" : {
     "_id" : "wm-HrdbEmployeeData-wm.LiveVariable-1479386390699",
@@ -2088,6 +2096,10 @@
       "package" : "com.hrdb.Employee"
     } ],
     "filterFields" : { },
-    "package" : "com.hrdb.Employee"
+    "package" : "com.hrdb.Employee",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   }
 }

@@ -31,4 +31,3 @@ public class VacationDao extends WMGenericDaoImpl<Vacation, Integer> {
         return this.template;
     }
 }
-

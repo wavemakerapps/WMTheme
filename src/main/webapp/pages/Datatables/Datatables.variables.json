@@ -693,6 +693,10 @@
       "package" : "com.hrdb.Employee"
     } ],
     "filterFields" : { },
-    "package" : "com.hrdb.Employee"
+    "package" : "com.hrdb.Employee",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   }
 }

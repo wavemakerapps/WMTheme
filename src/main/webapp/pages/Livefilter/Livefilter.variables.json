@@ -693,7 +693,11 @@
       "watchOn" : "HrdbEmployeeData",
       "package" : "com.hrdb.Employee"
     } ],
-    "package" : "com.hrdb.Employee"
+    "package" : "com.hrdb.Employee",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   },
   "listOfNations" : {
     "_id" : "wm-listOfNations-wm.Variable-1479468025488",

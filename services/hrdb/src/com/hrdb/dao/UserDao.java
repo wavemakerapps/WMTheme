@@ -31,4 +31,3 @@ public class UserDao extends WMGenericDaoImpl<User, Integer> {
         return this.template;
     }
 }
-

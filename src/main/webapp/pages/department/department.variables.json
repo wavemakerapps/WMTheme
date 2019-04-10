@@ -4,11 +4,7 @@
     "name" : "employeeByDept",
     "owner" : "Page",
     "category" : "wm.LiveVariable",
-    "dataBinding" : [ {
-      "target" : "deptId",
-      "value" : "bind:pageParams.dept_id",
-      "type" : "number"
-    } ],
+    "dataBinding" : [ ],
     "operation" : "read",
     "dataSet" : [ ],
     "type" : "Employee",
@@ -697,6 +693,16 @@
       "package" : "com.hrdb.Employee"
     } ],
     "filterFields" : { },
-    "package" : "com.hrdb.Employee"
+    "package" : "com.hrdb.Employee",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ {
+        "target" : "deptId",
+        "value" : "bind:pageParams.dept_id",
+        "type" : "number",
+        "matchMode" : "exact",
+        "required" : false
+      } ]
+    }
   }
 }

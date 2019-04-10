@@ -1624,6 +1624,10 @@
       "package" : "com.hrdb.Employee"
     } ],
     "filterFields" : { },
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    },
     "package" : "com.hrdb.Employee"
   },
   "listOfNations" : {

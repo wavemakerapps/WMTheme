@@ -235,7 +235,6 @@ public class Employee implements Serializable {
 
         this.employeeByManagerId = employeeByManagerId;
     }
-
     @JsonInclude(Include.NON_EMPTY)
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "employee")
     @Cascade({CascadeType.SAVE_UPDATE, CascadeType.REMOVE})
@@ -263,14 +262,10 @@ public class Employee implements Serializable {
     @PostPersist
     public void onPostPersist() {
         if(vacations != null) {
-            for(Vacation vacation : vacations) {
-                vacation.setEmployee(this);
-            }
+            vacations.forEach(_vacation -> _vacation.setEmployee(this));
         }
         if(employeesForManagerId != null) {
-            for(Employee employee : employeesForManagerId) {
-                employee.setEmployeeByManagerId(this);
-            }
+            employeesForManagerId.forEach(_employee -> _employee.setEmployeeByManagerId(this));
         }
     }
 
@@ -287,4 +282,3 @@ public class Employee implements Serializable {
         return Objects.hash(getEmpId());
     }
 }
-

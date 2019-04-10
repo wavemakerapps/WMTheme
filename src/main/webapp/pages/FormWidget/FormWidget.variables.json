@@ -167,7 +167,11 @@
     "tableType" : "TABLE",
     "properties" : [ ],
     "relatedTables" : [ ],
-    "package" : "com.hrdb.User"
+    "package" : "com.hrdb.User",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   },
   "HrdbVacationData" : {
     "_id" : "wm-HrdbVacationData-wm.LiveVariable-1479793875055",
@@ -495,7 +499,11 @@
       "watchOn" : "HrdbEmployeeData",
       "package" : "com.hrdb.Vacation"
     } ],
-    "package" : "com.hrdb.Vacation"
+    "package" : "com.hrdb.Vacation",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   },
   "ListOfNations" : {
     "_id" : "wm-ListOfNations-wm.Variable-1479456642576",

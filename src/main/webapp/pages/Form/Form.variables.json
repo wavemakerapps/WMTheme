@@ -212,7 +212,11 @@
     "tableType" : "TABLE",
     "properties" : [ ],
     "relatedTables" : [ ],
-    "package" : "com.hrdb.User"
+    "package" : "com.hrdb.User",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   },
   "HrdbVacationData" : {
     "_id" : "wm-HrdbVacationData-wm.LiveVariable-1480663719773",
@@ -540,7 +544,11 @@
       "watchOn" : "HrdbEmployeeData",
       "package" : "com.hrdb.Vacation"
     } ],
-    "package" : "com.hrdb.Vacation"
+    "package" : "com.hrdb.Vacation",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   },
   "VariableForSelect" : {
     "_id" : "wm-VariableForSelect-wm.LiveVariable-1479381281462",
@@ -1236,6 +1244,10 @@
       "package" : "com.hrdb.Employee"
     } ],
     "filterFields" : { },
-    "package" : "com.hrdb.Employee"
+    "package" : "com.hrdb.Employee",
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ ]
+    }
   }
 }
