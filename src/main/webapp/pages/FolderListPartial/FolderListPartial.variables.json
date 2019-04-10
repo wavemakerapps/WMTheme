@@ -27,5 +27,31 @@
     "type" : "string",
     "isList" : true,
     "saveInPhonegap" : false
+  },
+  "FileServiceuploadFile" : {
+    "_id" : "wm-FileServiceuploadFile-wm.ServiceVariable-1554874897574",
+    "autoUpdate" : false,
+    "category" : "wm.ServiceVariable",
+    "controller" : "File",
+    "dataBinding" : [ {
+      "target" : "files",
+      "type" : "java.lang.String",
+      "value" : "bind:Widgets.fileupload.selectedFiles"
+    } ],
+    "dataSet" : [ ],
+    "inFlightBehavior" : "executeLast",
+    "isDefault" : true,
+    "isList" : false,
+    "maxResults" : 20,
+    "name" : "FileServiceuploadFile",
+    "operation" : "uploadFile",
+    "operationId" : "FileController_uploadFile",
+    "owner" : "Page",
+    "saveInPhonegap" : false,
+    "service" : "FileService",
+    "serviceType" : "JavaService",
+    "startUpdate" : false,
+    "transformationRequired" : false,
+    "type" : "com.demo.fileservice.FileService.FileUploadResponse"
   }
 }

@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="FormWidgetPageController" pagetitle="Form Widget" name="page1"> 
+<wm-page pagetitle="Form Widget" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -156,7 +156,7 @@
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="1" name="gridcolumn71"></wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="5" name="gridcolumn44" padding="unset 1em unset unset" class="col-xs-6"> 
-                        <wm-checkboxset height="auto" dataset="Internet Explorer,  Mozilla,  Opera" name="checkboxset3" selectedvalues="Internet Explorer,  Mozilla" margin="unset unset 0px unset"></wm-checkboxset> 
+                        <wm-checkboxset height="auto" dataset="Internet Explorer,  Mozilla,  Opera" name="checkboxset3" margin="unset unset 0px unset" datavalue="Internet Explorer,  Mozilla"></wm-checkboxset> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
                 <wm-gridrow name="gridrow25_1" class="bordered-row"> 
@@ -167,7 +167,7 @@
                         <wm-checkboxset height="auto" dataset="Internet Explorer,  Mozilla,  Opera" margin="unset unset 0px unset" name="checkboxset5" layout="inline"></wm-checkboxset> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="5" name="gridcolumn118" class="col-xs-6"> 
-                        <wm-checkboxset height="auto" dataset="Internet Explorer,  Mozilla,  Opera" selectedvalues="Internet Explorer,  Mozilla" margin="unset unset 0px unset" name="checkboxset6" layout="inline"></wm-checkboxset> 
+                        <wm-checkboxset height="auto" dataset="Internet Explorer,  Mozilla,  Opera" margin="unset unset 0px unset" name="checkboxset6" layout="inline" datavalue="Internet Explorer,  Mozilla"></wm-checkboxset> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
                 <wm-gridrow name="gridrow21_1" class="bordered-row"> 
@@ -180,7 +180,7 @@
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="1" name="gridcolumn72"></wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="5" name="gridcolumn48" padding="unset 1em unset unset" class="col-xs-6"> 
-                        <wm-radioset height="auto" name="radioset3" dataset="Male, Female, Other" selectedvalue="Male" layout="stacked" margin="unset unset 0px unset"></wm-radioset> 
+                        <wm-radioset height="auto" name="radioset3" dataset="Male, Female, Other" layout="stacked" margin="unset unset 0px unset" datavalue="Male"></wm-radioset> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
                 <wm-gridrow name="gridrow26_1" class="bordered-row"> 
@@ -192,7 +192,7 @@
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="1" name="gridcolumn106_1"></wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="5" name="gridcolumn107"> 
-                        <wm-radioset height="auto" dataset="Male, Female, Other" selectedvalue="Male" layout="inline" margin="unset unset 0px unset" name="radioset4"></wm-radioset> 
+                        <wm-radioset height="auto" dataset="Male, Female, Other" layout="inline" margin="unset unset 0px unset" name="radioset4" datavalue="Male"></wm-radioset> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
                 <wm-gridrow name="gridrow22" class="bordered-row"> 
@@ -225,11 +225,11 @@
                         <wm-label caption="File Upload" class="h4" name="label18_1"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="4" name="gridcolumn74" padding="1em 1em unset 1em" class="col-xs-6"> 
-                        <wm-fileupload name="fileupload1" service="FileService" operation="uploadFile"></wm-fileupload> 
+                        <wm-fileupload name="fileupload1" on-select="Variables.FileServiceuploadFile.invoke()"></wm-fileupload> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="1" name="gridcolumn75"></wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="4" name="gridcolumn76" padding="1em 1em unset 1em" class="col-xs-6"> 
-                        <wm-fileupload service="FileService" operation="uploadFile" name="fileupload2" multiple="true"></wm-fileupload> 
+                        <wm-fileupload name="fileupload2" multiple="true" on-select="Variables.FileServiceuploadFile1.invoke()"></wm-fileupload> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="1" name="gridcolumn80_1"></wm-gridcolumn> 
                 </wm-gridrow> 
@@ -262,11 +262,11 @@
                         <wm-label caption="Select Locale" class="h4" name="label25"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="4" name="gridcolumn94" padding="unset 1em 1em 1em" class="col-xs-6"> 
-                        <wm-select class="select-locale" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select6" datafield="All Fields"></wm-select> 
+                        <wm-select class="select-locale" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select6" datafield="All Fields"></wm-select> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="1" name="gridcolumn82_1"></wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="4" name="gridcolumn96" padding="unset 1em 1em 1em" class="col-xs-6"> 
-                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select7"></wm-select> 
+                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select7"></wm-select> 
                         <wm-label padding="unset 0.5em" name="label36_1" class="h4" caption="bind:appLocale.LABEL_HELLO"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="1" name="gridcolumn83"></wm-gridcolumn> 
@@ -354,7 +354,7 @@
                         <wm-label caption="Html" class="h4" name="label25_1"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="9" name="gridcolumn60_1" padding="unset 1em 1em 1em"> 
-                        <wm-html name="html1" borderstyle="none" padding="1em unset"> 
+                        <wm-html name="html1" borderstyle="none" padding="1em unset" borderwidth="unset unset unset unset"> 
                             <p><strong><em>Lorem ipsum </em></strong> dolor sit amet, consectetur adipiscing elit. Sed aliquet <u><i>mauris vel felis</i></u> aliquam, eu dictum velit lobortis. Integer sit amet porttitor eros, non consectetur tortor. Proin ultrices justo sed elit imperdiet ornare.</p> 
                         </wm-html> 
                     </wm-gridcolumn> 

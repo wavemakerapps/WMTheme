@@ -1,4 +1,4 @@
-<wm-partial data-ng-controller="projectProgressDetailsPageController" name="partial1"> 
+<wm-partial name="partial1"> 
     <wm-layoutgrid name="projectListLayoutGrid"> 
         <wm-gridrow name="gridrowOne" padding="unset unset 1em unset"> 
             <wm-gridcolumn columnwidth="2" name="gridcolumnOne"> 
@@ -22,9 +22,8 @@
                         <wm-label caption="bind:&quot;Edited on: &quot; + (Variables.projectDetails.dataSet[$i].editedOn | toDate: 'yyyy-MM-dd HH:mm')" class="p small" name="editedOn"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="columnThree" padding="unset 0.2em"> 
-                        <wm-label caption="bind:&quot;progressed:&quot; + Variables.projectDetails.dataSet[$i].progress + &quot;%&quot;
-" class="p small" name="progressLabel" whitespace="nowrap"></wm-label> 
-                        <wm-progress name="progressProgress" datavalue="bind:Variables.projectDetails.dataSet[$i].progress" maxvalue="100" captionplacement="hidden" type="success" height="8"></wm-progress> 
+                        <wm-label caption="bind:&quot;progressed:&quot; + Variables.projectDetails.dataSet[$i].progress + &quot;%&quot;" class="p small" name="progressLabel" whitespace="nowrap"></wm-label> 
+                        <wm-progress-bar name="progressProgress" datavalue="bind:Variables.projectDetails.dataSet[$i].progress" maxvalue="100" captionplacement="hidden" type="success" height="8"></wm-progress-bar> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="4" name="coulumnFour" padding="unset 0.2em"> 
                         <wm-list listclass="list-inline" template="true" itemsperrow="xs-6 sm-3 md-3 lg-4" dataset="bind:Variables.projectDetails.dataSet[$i].contributors" navigation="None" name="empPictureList"> 
@@ -34,8 +33,8 @@
                         </wm-list> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="columnFive" horizontalalign="right"> 
-                        <wm-button class="btn-default btn-sm" caption="View" type="button" name="viewButton" iconclass="wi wi-folder" on-click="Variables.goToPage_ProjectDetail.invoke()" margin="0.2em"></wm-button> 
-                        <wm-button class="btn-default btn-sm" caption="Edit" type="button" name="editButton" iconclass="wi wi-mode-edit" on-click="Variables.goToPage_ProjectDetail.invoke()" margin="0.2em"></wm-button> 
+                        <wm-button class="btn-default btn-sm" caption="View" type="button" name="viewButton" iconclass="wi wi-folder" on-click="Actions.goToPage_ProjectDetail.invoke()" margin="0.2em"></wm-button> 
+                        <wm-button class="btn-default btn-sm" caption="Edit" type="button" name="editButton" iconclass="wi wi-mode-edit" on-click="Actions.goToPage_ProjectDetail.invoke()" margin="0.2em"></wm-button> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
             </wm-layoutgrid> 

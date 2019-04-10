@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="IssueTrackerPageController" pagetitle="Issue Tracker" name="page1"> 
+<wm-page pagetitle="Issue Tracker" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -31,21 +31,21 @@
                         <wm-gridcolumn columnwidth="12" name="gridcolumn4_1" padding="0.5em unset unset unset"> 
                             <wm-table title="" dataset="bind:Variables.blogAndFAQNewsFeed.dataSet" navigation="None" name="grid1" showheader="false" gridclass="table-hover"> 
                                 <wm-table-column binding="bugType" caption="Bug Type" type="string" widget-type="label" width="8%" readonly="true" edit-widget-type="text" show="true"> 
-                                    <label class="text-small label" data-ng-class="{'label-info':row.getProperty('bugType') == 'Added', 'label-success':row.getProperty('bugType') == 'Fixed', 'label-danger':row.getProperty('bugType') == &quot;Bug&quot;}">{{row.getProperty('bugType')}}</label> 
+                                    <label class="text-small label" data-ng-class="{'label-info':row.getProperty('bugType') == 'Added', 'label-success':row.getProperty('bugType') == 'Fixed', 'label-danger':row.getProperty('bugType') == &quot;Bug&quot;}">{{row?.getProperty('bugType')}}</label> 
                                 </wm-table-column> 
                                 <wm-table-column binding="FAQ" caption="Faq" type="string" widget-type="anchor" width="30%" readonly="true" edit-widget-type="text" show="true"> 
-                                    <wm-anchor padding="unset 0.5em" caption="{{'ISSUE - '+row.getProperty('comments')}}" hyperlink="" fontweight="bold" ng-class=""></wm-anchor> 
-                                    <wm-label caption="{{row.getProperty('FAQ')}}" class="p small" ng-class="" padding="unset 0.5em"></wm-label> 
+                                    <wm-anchor padding="unset 0.5em" caption="bind:('ISSUE - '+row.getProperty('comments'))" hyperlink="" fontweight="bold" ng-class=""></wm-anchor> 
+                                    <wm-label caption="bind:(row.getProperty('FAQ'))" class="p small" ng-class="" padding="unset 0.5em"></wm-label> 
                                 </wm-table-column> 
                                 <wm-table-column binding="postedBy" caption="Posted By" type="string" width="15%" readonly="true" edit-widget-type="text" show="true"></wm-table-column> 
                                 <wm-table-column binding="postedOn" caption="Posted On" type="string" widget-type="label" width="15%" readonly="true" edit-widget-type="text" show="true"> 
-                                    <wm-label caption="{{row.getProperty('postedOn')  | toDate: 'yyyy-MM-dd HH:mm'}}" class="inline" ng-class="" padding="unset 0.5em"></wm-label> 
+                                    <wm-label caption="bind:(row.getProperty('postedOn')  | toDate: 'yyyy-MM-dd HH:mm')" class="inline" ng-class="" padding="unset 0.5em"></wm-label> 
                                 </wm-table-column> 
                                 <wm-table-column binding="customField" caption="stats" type="string" widget-type="label" width="80px" readonly="true" edit-widget-type="text" searchable="false" show="true"> 
                                     <wm-chart type="Pie" title="" iconclass="" height="64" width="64" showlegend="hide" showlabels="hide" theme="Retro" name="KolterChart" donutratio="0.3" offsettop="0" dataset="bind:row.status" xaxisdatakey="dataValue" yaxisdatakey="dataValue" style="margin-top:-20px"></wm-chart> 
                                 </wm-table-column> 
                                 <wm-table-column binding="comments" caption="Comments" type="string" widget-type="label" width="3%" readonly="true" edit-widget-type="text" show="true"> 
-                                    <wm-label caption="{{row.getProperty('comments')+'d'}}" class="" ng-class="" data-ng-class=""></wm-label> 
+                                    <wm-label caption="bind:(row.getProperty('comments')+'d')" class="" ng-class="" data-ng-class=""></wm-label> 
                                 </wm-table-column> 
                                 <wm-table-column binding="customField2" caption="customtag" type="string" readonly="true" edit-widget-type="text" searchable="false" show="true"> 
                                     <wm-chips name="chips1" datavalue="bind:row.queryTags" datafield="label" displayfield="label" readonly="true"></wm-chips> 

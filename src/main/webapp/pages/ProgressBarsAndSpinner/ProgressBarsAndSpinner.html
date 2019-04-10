@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="ProgressBarsAndSpinnerPageController" pagetitle="Progress Bars And Spinner" name="page1"> 
+<wm-page pagetitle="Progress Bars And Spinner" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -12,14 +12,14 @@
                         <wm-label padding="unset 0.5em" caption="type: &quot;default&quot;" name="label8" class="code"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="3" name="gridcolumn2" padding="1em unset unset unset"> 
-                        <wm-progress name="progress1" datavalue="30" captionplacement="inside"></wm-progress> 
+                        <wm-progress-bar name="progress1" datavalue="30" captionplacement="inside"></wm-progress-bar> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="gridcolumn35_1"></wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="gridcolumn35"> 
                         <wm-label padding="unset 0.5em" caption="type: &quot;default-striped&quot;" name="label9" class="code"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="3" name="gridcolumn36_1" padding="1em unset unset unset"> 
-                        <wm-progress name="progress2" type="default-striped" captionplacement="hidden" datavalue="30"></wm-progress> 
+                        <wm-progress-bar name="progress2" type="default-striped" captionplacement="hidden" datavalue="30"></wm-progress-bar> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
                 <wm-gridrow name="gridrow13_1" class="bordered-row"> 
@@ -27,14 +27,14 @@
                         <wm-label padding="unset 0.5em" caption="type: &quot;success&quot;" name="label10" class="code"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="3" name="gridcolumn37_1" padding="1em unset unset unset"> 
-                        <wm-progress type="success" name="progress3" datavalue="30" captionplacement="inside"></wm-progress> 
+                        <wm-progress-bar type="success" name="progress3" datavalue="30" captionplacement="inside"></wm-progress-bar> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="gridcolumn38"></wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="gridcolumn39"> 
                         <wm-label padding="unset 0.5em" caption="type: &quot;success-striped&quot;" name="label11" class="code"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="3" name="gridcolumn40" padding="1em unset unset unset"> 
-                        <wm-progress type="success-striped" name="progress5" datavalue="30"></wm-progress> 
+                        <wm-progress-bar type="success-striped" name="progress5" datavalue="30"></wm-progress-bar> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
                 <wm-gridrow name="gridrow14_1" class="bordered-row"> 
@@ -42,14 +42,14 @@
                         <wm-label padding="unset 0.5em" caption="type: &quot;info&quot;" name="label12" class="code"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="3" name="gridcolumn42_1" padding="1em unset unset unset"> 
-                        <wm-progress type="info" name="progress6" datavalue="30"></wm-progress> 
+                        <wm-progress-bar type="info" name="progress6" datavalue="30"></wm-progress-bar> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="gridcolumn43"></wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="gridcolumn44"> 
                         <wm-label padding="unset 0.5em" caption="type: &quot;info-striped&quot;" name="label13" class="code"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="3" name="gridcolumn45" padding="1em unset unset unset"> 
-                        <wm-progress type="info-striped" name="progress7" datavalue="30"></wm-progress> 
+                        <wm-progress-bar type="info-striped" name="progress7" datavalue="30"></wm-progress-bar> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
                 <wm-gridrow name="gridrow13_2" class="bordered-row"> 
@@ -57,14 +57,14 @@
                         <wm-label padding="unset 0.5em" caption="type: &quot;success&quot;" name="label14" class="code"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="3" name="gridcolumn39_1" padding="1em unset unset unset"> 
-                        <wm-progress type="warning" name="progress8" datavalue="30"></wm-progress> 
+                        <wm-progress-bar type="warning" name="progress8" datavalue="30"></wm-progress-bar> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="gridcolumn40_1"></wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="gridcolumn41"> 
                         <wm-label padding="unset 0.5em" caption="type: &quot;success-striped&quot;" name="label15" class="code"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="3" name="gridcolumn42" padding="1em unset unset unset"> 
-                        <wm-progress type="warning-striped" name="progress9" datavalue="30"></wm-progress> 
+                        <wm-progress-bar type="warning-striped" name="progress9" datavalue="30"></wm-progress-bar> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
                 <wm-gridrow name="gridrow14_2" class="bordered-row"> 
@@ -72,14 +72,14 @@
                         <wm-label padding="unset 0.5em" caption="type: &quot;danger&quot;" name="label16" class="code"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="3" name="gridcolumn44_1" padding="1em unset unset unset"> 
-                        <wm-progress type="danger" name="progress10" datavalue="30"></wm-progress> 
+                        <wm-progress-bar type="danger" name="progress10" datavalue="30"></wm-progress-bar> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="gridcolumn45_1"></wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="2" name="gridcolumn46"> 
                         <wm-label padding="unset 0.5em" caption="type: &quot;danger-striped&quot;" name="label17" class="code"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="3" name="gridcolumn47" padding="1em unset unset unset"> 
-                        <wm-progress type="danger-striped" name="progress11" datavalue="30" displayformat="percentage" captionplacement="hidden"></wm-progress> 
+                        <wm-progress-bar type="danger-striped" name="progress11" datavalue="30" displayformat="percentage" captionplacement="hidden"></wm-progress-bar> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
             </wm-layoutgrid> 
@@ -94,7 +94,7 @@
                         </wm-container> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="9" name="gridcolumn30" padding="1em unset unset unset"> 
-                        <wm-progress type="danger-striped" captionplacement="inside" height="auto" name="progress12" maxvalue="100" datavalue="50"></wm-progress> 
+                        <wm-progress-bar type="danger-striped" captionplacement="inside" height="auto" name="progress12" maxvalue="100" datavalue="50"></wm-progress-bar> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
                 <wm-gridrow class="bordered-row" name="gridrow15"> 
@@ -106,7 +106,7 @@
                         </wm-container> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="9" name="gridcolumn32" padding="1em unset unset unset"> 
-                        <wm-progress type="success" name="progress13" datavalue="100" displayformat="absolute" captionplacement="inside" height="auto"></wm-progress> 
+                        <wm-progress-bar type="success" name="progress13" datavalue="100" displayformat="absolute" captionplacement="inside" height="auto"></wm-progress-bar> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
                 <wm-gridrow name="gridrow13_3" class="bordered-row"> 
@@ -121,7 +121,7 @@
                         </wm-container> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="9" name="gridcolumn41_2" padding="1em unset unset unset"> 
-                        <wm-progress type="info-striped" datavalue="100" displayformat="absolute" captionplacement="inside" height="20" name="progress14"></wm-progress> 
+                        <wm-progress-bar type="info-striped" datavalue="100" displayformat="absolute" captionplacement="inside" height="20" name="progress14"></wm-progress-bar> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
                 <wm-gridrow name="gridrow14_3" class="bordered-row"> 
@@ -136,7 +136,7 @@
                         </wm-container> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="9" name="gridcolumn43_2" padding="1em unset unset unset"> 
-                        <wm-progress type="danger-striped" datavalue="50" displayformat="absolute" captionplacement="inside" height="20" name="progress15" class="active"></wm-progress> 
+                        <wm-progress-bar type="danger-striped" datavalue="50" displayformat="absolute" captionplacement="inside" height="20" name="progress15" class="active"></wm-progress-bar> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
             </wm-layoutgrid> 

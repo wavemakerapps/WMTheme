@@ -1,4 +1,4 @@
-<wm-partial data-ng-controller="leftnavPageController" name="leftnav" type="leftnav"> 
-    <wm-search name="search1" dataset="bind:Variables.userInterfaceCategory.dataSet" displaylabel="label" datafield="link" on-select="Variables.dynamicUINavigator.invoke()"></wm-search> 
+<wm-partial name="leftnav" type="leftnav"> 
+    <wm-search name="search1" dataset="bind:Variables.userInterfaceCategory.dataSet" displaylabel="label" datafield="link" on-select="Actions.dynamicUINavigator.invoke()"></wm-search> 
     <wm-nav name="leftnavigation" type="pills" layout="stacked" dataset="bind:Variables.userInterfaceCategory.dataSet"></wm-nav> 
 </wm-partial>

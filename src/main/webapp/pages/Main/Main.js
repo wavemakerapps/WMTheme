@@ -1,22 +1,19 @@
-Application.$controller("MainPageController", ["$scope", "$window", function($scope, $window) {
-    "use strict";
+/* perform any action on widgets/variables within this block */
 
-    /* perform any action on widgets/variables within this block */
-    $scope.onPageReady = function() {
-        /*
-         * variables can be accessed through '$scope.Variables' property here
-         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
-         * $scope.Variables.loggedInUser.getData()
-         *
-         * widgets can be accessed through '$scope.Widgets' property here
-         * e.g. to get value of text widget named 'username' use following script
-         * '$scope.Widgets.username.datavalue'
-         */
-    };
+Page.onReady = function () {
+    /*
+     * variables can be accessed through 'Page.Variables' property here
+     * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+     * Page.Variables.loggedInUser.getData()
+     *
+     * widgets can be accessed through 'Page.Widgets' property here
+     * e.g. to get value of text widget named 'username' use following script
+     * 'Page.Widgets.username.datavalue'
+     */
 
+};
 
-    $scope.UICardClick = function($event, $isolateScope, item, currentItemWidgets) {
-        $window.location.href = item.link;
-    };
+Page.UICardClick = function ($event, widget, item, currentItemWidgets) {
+    window.location.href = item.link;
+};
 
-}]);

@@ -1,67 +1,58 @@
-Application.$controller("ChartsPageController", ["$scope", "$location", function($scope, $location) {
-    "use strict";
+/* perform any action on widgets/variables within this block */
 
-    /* perform any action on widgets/variables within this block */
-    $scope.onPageReady = function() {
-        console.log($location);
-        debugger
-        /*
-         * variables can be accessed through '$scope.Variables' property here
-         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
-         * $scope.Variables.loggedInUser.getData()
-         *
-         * widgets can be accessed through '$scope.Widgets' property here
-         * e.g. to get value of text widget named 'username' use following script
-         * '$scope.Widgets.username.datavalue'
-         */
-        //$scope.$root.updateBread($scope.activePageName);
-    };
+Page.onReady = function () {
+    console.log(location);
+    debugger;
+    /*
+     * variables can be accessed through 'Page.Variables' property here
+     * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+     * Page.Variables.loggedInUser.getData()
+     *
+     * widgets can be accessed through 'Page.Widgets' property here
+     * e.g. to get value of text widget named 'username' use following script
+     * 'Page.Widgets.username.datavalue'
+     */
 
-    $scope.columnChartThemeListClick = function($event, $isolateScope) {
-        $scope.Widgets.columnChart.theme = $isolateScope.item.title;
-        $scope.Widgets.columnChart.redraw();
-    };
+    //App.updateBread(Page.activePageName);
+};
 
+Page.columnChartThemeListClick = function ($event, widget) {
+    Page.Widgets.columnChart.theme = widget.item.title;
+    Page.Widgets.columnChart.redraw();
+};
 
-    $scope.areaChartThemeListClick = function($event, $isolateScope) {
-        $scope.Widgets.areaChart.theme = $isolateScope.item.title;
-        $scope.Widgets.areaChart.redraw();
-    };
+Page.areaChartThemeListClick = function ($event, widget) {
+    Page.Widgets.areaChart.theme = widget.item.title;
+    Page.Widgets.areaChart.redraw();
+};
 
+Page.barChartThemeListClick = function ($event, widget) {
+    Page.Widgets.barChart.theme = widget.item.title;
+    Page.Widgets.barChart.redraw();
+};
 
-    $scope.barChartThemeListClick = function($event, $isolateScope) {
-        $scope.Widgets.barChart.theme = $isolateScope.item.title;
-        $scope.Widgets.barChart.redraw();
-    };
+Page.bubbleChartThemeListClick = function ($event, widget) {
+    Page.Widgets.bubbleChart.theme = widget.item.title;
+    Page.Widgets.bubbleChart.redraw();
+};
 
+Page.cumulativeChartThemeListClick = function ($event, widget) {
+    Page.Widgets.cumulativeChart.theme = widget.item.title;
+    Page.Widgets.cumulativeChart.redraw();
+};
 
-    $scope.bubbleChartThemeListClick = function($event, $isolateScope) {
-        $scope.Widgets.bubbleChart.theme = $isolateScope.item.title;
-        $scope.Widgets.bubbleChart.redraw();
-    };
+Page.donutChartThemeListClick = function ($event, widget) {
+    Page.Widgets.donutChart.theme = widget.item.title;
+    Page.Widgets.donutChart.redraw();
+};
 
+Page.lineChartThemeListClick = function ($event, widget) {
+    Page.Widgets.lineChart.theme = widget.item.title;
+    Page.Widgets.lineChart.redraw();
+};
 
-    $scope.cumulativeChartThemeListClick = function($event, $isolateScope) {
-        $scope.Widgets.cumulativeChart.theme = $isolateScope.item.title;
-        $scope.Widgets.cumulativeChart.redraw();
-    };
+Page.pieChartThemeListClick = function ($event, widget) {
+    Page.Widgets.pieChart.theme = widget.item.title;
+    Page.Widgets.pieChart.redraw();
+};
 
-
-    $scope.donutChartThemeListClick = function($event, $isolateScope) {
-        $scope.Widgets.donutChart.theme = $isolateScope.item.title;
-        $scope.Widgets.donutChart.redraw();
-    };
-
-
-    $scope.lineChartThemeListClick = function($event, $isolateScope) {
-        $scope.Widgets.lineChart.theme = $isolateScope.item.title;
-        $scope.Widgets.lineChart.redraw();
-    };
-
-
-    $scope.pieChartThemeListClick = function($event, $isolateScope) {
-        $scope.Widgets.pieChart.theme = $isolateScope.item.title;
-        $scope.Widgets.pieChart.redraw();
-    };
-
-}]);

@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="ClientsPageController" pagetitle="Clients" name="page1"> 
+<wm-page pagetitle="Clients" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -28,17 +28,17 @@
                                             <wm-tabpane title="Contacts" name="employeeMessagePane" paneicon="wi wi-person"> 
                                                 <wm-table title="" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="None" name="employeeContactList" gridclass="table-hover"> 
                                                     <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" width="64px" generator="assigned" readonly="true" edit-widget-type="text" show="true"> 
-                                                        <img data-ng-src="{{row.getProperty('picurl')}}" alt="{{row.getProperty('picurl')}}" class="img-circle" data-ng-class=""> 
+                                                        <img [attr.data-ng-src]="row?.getProperty('picurl')" [attr.alt]="row?.getProperty('picurl')" class="img-circle" data-ng-class=""> 
                                                     </wm-table-column> 
                                                     <wm-table-column binding="Empname" caption="Empname" type="string" widget-type="label" width="15%" edit-widget-type="text" searchable="false" show="true" readonly="false"> 
-                                                        <wm-label caption="{{row.getProperty('firstname')+' '+row.getProperty('lastname')}}" class="bold" data-ng-class=""></wm-label> 
+                                                        <wm-label caption="bind:(row.getProperty('firstname')+' '+row.getProperty('lastname'))" class="bold" data-ng-class=""></wm-label> 
                                                     </wm-table-column> 
                                                     <wm-table-column binding="jobTitle" caption="Job Title" type="string" width="20%" generator="assigned" readonly="true" edit-widget-type="text" show="true"></wm-table-column> 
                                                     <wm-table-column binding="Empemail" caption="Empemail" type="string" widget-type="anchor" width="25%" edit-widget-type="text" searchable="false" show="true" readonly="false"> 
-                                                        <wm-anchor href="" iconclass="wi wi-email" caption="{{row.getProperty('firstname')+'.'+row.getProperty('lastname')+'@mobeteq.com'}}" hyperlink="mailto:" class="text-ellipsis" data-ng-class=""></wm-anchor> 
+                                                        <wm-anchor iconclass="wi wi-email" caption="bind:(row.getProperty('firstname')+'.'+row.getProperty('lastname')+'@mobeteq.com')" hyperlink="" class="text-ellipsis" data-ng-class=""></wm-anchor> 
                                                     </wm-table-column> 
                                                     <wm-table-column binding="status" caption="Status" type="string" widget-type="label" width="10%" textalignment="center" edit-widget-type="text" searchable="false" show="true" readonly="false"> 
-                                                        <label caption="{{row.getProperty('status')}}" class="small label" data-ng-class="{'label-success':row.empId%3 == 0, 'label-danger':row.empId%2 == 0, 'label-warning':row.empId%2 != 0 &amp;&amp; row.empId%3 != 0}">{{(row.empId%3 == 0) ? "Active" : (row.empId%2 == 0) ? "Deleted" : "Waiting"}}</label> 
+                                                        <label [attr.caption]="row?.getProperty('status')" class="small label" data-ng-class="{'label-success':row.empId%3 == 0, 'label-danger':row.empId%2 == 0, 'label-warning':row.empId%2 != 0 &amp;&amp; row.empId%3 != 0}">{{(row?.empId%3 == 0) ? "Active" : (row?.empId%2 == 0) ? "Deleted" : "Waiting"}}</label> 
                                                     </wm-table-column> 
                                                 </wm-table> 
                                             </wm-tabpane> 
@@ -50,10 +50,10 @@
                                                     <wm-table-column binding="department.name" caption="Department Name" type="string" width="30%" primary-key="false" generator="assigned" readonly="true" show="true" related-entity-name="Department"></wm-table-column> 
                                                     <wm-table-column binding="department.location" caption="Department Location" type="string" widget-type="label" width="30%" primary-key="false" generator="assigned" readonly="true" show="true" related-entity-name="Department"> 
                                                         <wm-icon name="icon2_1" iconclass="wi wi-flag"></wm-icon> 
-                                                        <wm-label caption="{{row.getProperty('department.location')}}" class="inline" padding="unset 0.5em"></wm-label> 
+                                                        <wm-label caption="bind:(row.getProperty('department.location'))" class="inline" padding="unset 0.5em"></wm-label> 
                                                     </wm-table-column> 
                                                     <wm-table-column binding="customField1" caption="status" type="string" widget-type="label" width="20%" textalignment="center" readonly="true" searchable="false" show="true"> 
-                                                        <label class="label" data-ng-class="{'label-success':row.department.deptId == 1, 'label-warning':row.department.deptId == 5, 'label-primary':row.department.deptId !=  1 &amp;&amp; row.department.deptId != 5}">{{row.department.deptId == 1 ? 'Active' : row.department.deptId == 5 ? 'Waiting' : 'New' }}</label> 
+                                                        <label class="label" data-ng-class="{'label-success':row.department.deptId == 1, 'label-warning':row.department.deptId == 5, 'label-primary':row.department.deptId !=  1 &amp;&amp; row.department.deptId != 5}">{{row?.department?.deptId == 1 ? 'Active' : row?.department?.deptId == 5 ? 'Waiting' : 'New' }}</label> 
                                                     </wm-table-column> 
                                                 </wm-table> 
                                             </wm-tabpane> 

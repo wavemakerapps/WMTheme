@@ -1,18 +1,16 @@
-Application.$controller("ProjectsPageController", ["$scope", function($scope) {
-    "use strict";
+/* perform any action on widgets/variables within this block */
 
-    /* perform any action on widgets/variables within this block */
-    $scope.onPageReady = function() {
-        /*
-         * variables can be accessed through '$scope.Variables' property here
-         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
-         * $scope.Variables.loggedInUser.getData()
-         *
-         * widgets can be accessed through '$scope.Widgets' property here
-         * e.g. to get value of text widget named 'username' use following script
-         * '$scope.Widgets.username.datavalue'
-         */
-        $scope.$root.updateBread($scope.activePageName);
-    };
+Page.onReady = function () {
+    /*
+     * variables can be accessed through 'Page.Variables' property here
+     * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+     * Page.Variables.loggedInUser.getData()
+     *
+     * widgets can be accessed through 'Page.Widgets' property here
+     * e.g. to get value of text widget named 'username' use following script
+     * 'Page.Widgets.username.datavalue'
+     */
 
-}]);
+    App.updateBread(App.activePageName);
+};
+

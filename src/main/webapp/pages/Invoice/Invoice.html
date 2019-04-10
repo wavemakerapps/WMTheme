@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="InvoicePageController" pagetitle="Invoice" name="page1"> 
+<wm-page pagetitle="Invoice" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -37,8 +37,8 @@
                         <wm-gridcolumn columnwidth="12" name="gridColumnThree" padding="2.2em 1em unset 1em"> 
                             <wm-table title="" dataset="bind:Variables.invoiceData.dataSet" navigation="None" name="paymentDataList" gridclass="" multiselect="false" radioselect="false" enablecolumnselection="false" gridfirstrowselect="true"> 
                                 <wm-table-column binding="Item list" caption="Item List" type="string" widget-type="label" width="500px" readonly="true" edit-widget-type="text" show="true"> 
-                                    <wm-label caption="{{row.getProperty('Item list')}}" class="p" ng-class="" fontweight="bold"></wm-label> 
-                                    <wm-label caption="{{row.getProperty('Description')}}" class="" ng-class=""></wm-label> 
+                                    <wm-label caption="bind:(row.getProperty('Item list'))" class="p" ng-class="" fontweight="bold"></wm-label> 
+                                    <wm-label caption="bind:(row.getProperty('Description'))" class="" ng-class=""></wm-label> 
                                 </wm-table-column> 
                                 <wm-table-column binding="Quantity" caption="Quantity" type="string" width="15%" textalignment="right" readonly="true" edit-widget-type="text" show="true"></wm-table-column> 
                                 <wm-table-column binding="Unit price" caption="Unit Price" type="string" width="10%" textalignment="right" readonly="true" edit-widget-type="text" show="true"></wm-table-column> 

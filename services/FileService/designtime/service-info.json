@@ -1,0 +1,7 @@
+{
+  "id" : "FileService",
+  "type" : "JavaService",
+  "packageNames" : [ "com.wmtheme.fileservice" ],
+  "serviceClassNames" : [ "com.wmtheme.fileservice.FileService" ],
+  "title" : "FileService"
+}

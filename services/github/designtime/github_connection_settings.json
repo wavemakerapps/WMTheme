@@ -1,6 +1,5 @@
 {
   "headers" : { },
-  "proxy" : null,
   "endpointAddress" : "https://api.github.com/repos/vmg/redcarpet/comments",
   "method" : "GET",
   "requestBody" : "",

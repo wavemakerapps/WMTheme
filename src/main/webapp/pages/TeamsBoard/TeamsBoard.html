@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="TeamsBoardPageController" pagetitle="Teams Board" name="page1"> 
+<wm-page pagetitle="Teams Board" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -42,7 +42,7 @@
                         <wm-label name="teamDesignationLabel" caption="bind:'Info about ' + Variables.departmentData.dataSet.data[$i].name  + ' Team'" class="h4"></wm-label> 
                         <wm-label caption="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has." name="TeamDescription" class="p"></wm-label> 
                         <wm-label caption="Status of current project:" name="projectStatusLabel" class="p"></wm-label> 
-                        <wm-progress name="projectStatusProgressBar" datavalue="bind:Variables.departmentData.dataSet.data[$i].deptId" maxvalue="8" captionplacement="inside" type="bind:( Variables.departmentData.dataSet.data[$i].deptId < 3 ) ? &quot;success&quot; : &quot;default&quot; " displayformat="percentage"></wm-progress> 
+                        <wm-progress-bar name="projectStatusProgressBar" datavalue="bind:Variables.departmentData.dataSet.data[$i].deptId" maxvalue="8" captionplacement="inside" type="bind:( Variables.departmentData.dataSet.data[$i].deptId < 3 ) ? &quot;success&quot; : &quot;default&quot; " displayformat="percentage"></wm-progress-bar> 
                     </wm-panel> 
                 </wm-listtemplate> 
             </wm-list> 

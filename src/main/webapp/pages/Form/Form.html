@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="FormPageController" pagetitle="Form" name="page1"> 
+<wm-page pagetitle="Form" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -93,7 +93,7 @@
                             </wm-gridrow> 
                         </wm-layoutgrid> 
                         <wm-form-action key="reset" class="form-reset btn-secondary" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true"></wm-form-action> 
-                        <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+                        <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true" action=""></wm-form-action> 
                     </wm-liveform> 
                 </wm-tabpane> 
                 <wm-tabpane name="tabpane2" title="Form with Two Column's" paneicon="fa fa-edit"> 
@@ -134,7 +134,7 @@
                         </wm-layoutgrid> 
                         <wm-form-field name="empId" displayname="Emp Id" show="false" primary-key="true" generator="identity" key="empId" type="integer" readonly required step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
                         <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-secondary" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" type="button" update-mode="true"></wm-form-action> 
-                        <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action> 
+                        <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true" action=""></wm-form-action> 
                     </wm-liveform> 
                 </wm-tabpane> 
                 <wm-tabpane name="tabpane3" title="Form with Three Column's" paneicon="fa fa-edit"> 
@@ -318,7 +318,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow200"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn232"> 
-                                        <wm-fileupload name="fileupload2" service="FileService" operation="uploadFile" multiple="true"></wm-fileupload> 
+                                        <wm-fileupload name="fileupload2" multiple="true" on-select="Variables.FileServiceuploadFile.invoke()"></wm-fileupload> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow45"> 
@@ -338,7 +338,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow42"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn57"> 
-                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select1"></wm-select> 
+                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select1"></wm-select> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow41"> 
@@ -418,7 +418,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow202"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn234"> 
-                                        <wm-fileupload name="fileupload2" service="FileService" operation="uploadFile" multiple="true"></wm-fileupload> 
+                                        <wm-fileupload name="fileupload2" multiple="true" on-select="Variables.FileServiceuploadFile1.invoke()"></wm-fileupload> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow45"> 
@@ -438,7 +438,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow42"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn57"> 
-                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select1"></wm-select> 
+                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select1"></wm-select> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow41"> 
@@ -518,7 +518,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow204"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn236"> 
-                                        <wm-fileupload name="fileupload2" service="FileService" operation="uploadFile" multiple="true"></wm-fileupload> 
+                                        <wm-fileupload name="fileupload2" multiple="true" on-select="Variables.FileServiceuploadFile2.invoke()"></wm-fileupload> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow45"> 
@@ -538,7 +538,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow42"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn57"> 
-                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select1"></wm-select> 
+                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select1"></wm-select> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow41"> 
@@ -620,7 +620,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow206"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn238"> 
-                                        <wm-fileupload name="fileupload2" service="FileService" operation="uploadFile" multiple="true"></wm-fileupload> 
+                                        <wm-fileupload name="fileupload2" multiple="true" on-select="Variables.FileServiceuploadFile3.invoke()"></wm-fileupload> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow45"> 
@@ -640,7 +640,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow42"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn57"> 
-                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select1"></wm-select> 
+                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select1"></wm-select> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow41"> 
@@ -720,7 +720,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow208"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn240"> 
-                                        <wm-fileupload name="fileupload2" service="FileService" operation="uploadFile" multiple="true"></wm-fileupload> 
+                                        <wm-fileupload name="fileupload2" multiple="true" on-select="Variables.FileServiceuploadFile4.invoke()"></wm-fileupload> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow45"> 
@@ -740,7 +740,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow42"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn57"> 
-                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select1"></wm-select> 
+                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select1"></wm-select> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow41"> 
@@ -820,7 +820,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow210"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn242"> 
-                                        <wm-fileupload name="fileupload2" service="FileService" operation="uploadFile" multiple="true"></wm-fileupload> 
+                                        <wm-fileupload name="fileupload2" multiple="true" on-select="Variables.FileServiceuploadFile5.invoke()"></wm-fileupload> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow45"> 
@@ -840,7 +840,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow42"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn57"> 
-                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select1"></wm-select> 
+                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select1"></wm-select> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow41"> 
@@ -922,7 +922,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow212"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn244"> 
-                                        <wm-fileupload name="fileupload2" service="FileService" operation="uploadFile" multiple="true"></wm-fileupload> 
+                                        <wm-fileupload name="fileupload2" multiple="true" on-select="Variables.FileServiceuploadFile6.invoke()"></wm-fileupload> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow45"> 
@@ -942,7 +942,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow42"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn57"> 
-                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select1"></wm-select> 
+                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select1"></wm-select> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow41"> 
@@ -1027,7 +1027,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow214"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn246"> 
-                                        <wm-fileupload name="fileupload2" service="FileService" operation="uploadFile" multiple="true"></wm-fileupload> 
+                                        <wm-fileupload name="fileupload2" multiple="true" on-select="Variables.FileServiceuploadFile7.invoke()"></wm-fileupload> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow45"> 
@@ -1047,7 +1047,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow42"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn57"> 
-                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select1"></wm-select> 
+                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select1"></wm-select> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow41"> 
@@ -1132,7 +1132,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow216"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn248"> 
-                                        <wm-fileupload name="fileupload2" service="FileService" operation="uploadFile" multiple="true"></wm-fileupload> 
+                                        <wm-fileupload name="fileupload2" multiple="true" on-select="Variables.FileServiceuploadFile8.invoke()"></wm-fileupload> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow45"> 
@@ -1152,7 +1152,7 @@
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow42"> 
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn57"> 
-                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select1"></wm-select> 
+                                        <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select1"></wm-select> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 
                                 <wm-gridrow name="gridrow41"> 

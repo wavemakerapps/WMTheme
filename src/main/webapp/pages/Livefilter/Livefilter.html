@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="LivefilterPageController" pagetitle="Livefilter" name="page1"> 
+<wm-page pagetitle="Livefilter" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -14,23 +14,23 @@
                                     <wm-filter-field name="empId" field="empId" displayname="Emp Id" widget="number" is-range="false" type="integer" is-primary-key="true" generator="identity" show="true" inputtype="number" key="empId" placeholder="Enter value"></wm-filter-field> 
                                 </wm-gridcolumn> 
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn17_1"> 
-                                    <wm-filter-field name="department" field="department" displayname="Department" widget="autocomplete" lookup-type="Department" lookup-field="name" is-related="true" related-entity-name="Department" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" key="department" placeholder="Enter value" datafield="key" searchkey="value" displaylabel="value" matchMode="startignorecase"></wm-filter-field> 
+                                    <wm-filter-field name="department" field="department" displayname="Department" widget="autocomplete" lookup-type="Department" lookup-field="name" is-related="true" related-entity-name="Department" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" key="department" placeholder="Enter value" datafield="key" searchkey="value" displaylabel="value" matchmode="startignorecase"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                             <wm-gridrow name="gridrow9"> 
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn19_1"> 
-                                    <wm-filter-field name="lastname" field="lastname" displayname="Lastname" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="lastname" placeholder="Enter value" matchMode="startignorecase"></wm-filter-field> 
+                                    <wm-filter-field name="lastname" field="lastname" displayname="Lastname" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="lastname" placeholder="Enter value" matchmode="startignorecase"></wm-filter-field> 
                                 </wm-gridcolumn> 
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn18_1"> 
-                                    <wm-filter-field name="firstname" field="firstname" displayname="Firstname" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="firstname" placeholder="Enter value" matchMode="startignorecase"></wm-filter-field> 
+                                    <wm-filter-field name="firstname" field="firstname" displayname="Firstname" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="firstname" placeholder="Enter value" matchmode="startignorecase"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                             <wm-gridrow name="gridrow1"> 
                                 <wm-gridcolumn name="gridcolumn1" columnwidth="6"> 
-                                    <wm-filter-field name="jobTitle" field="jobTitle" related-field="Job Title" widget="autocomplete" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchMode="startignorecase" inputtype="text" displayname="Job Title" key="jobTitle" placeholder="Enter value"></wm-filter-field> 
+                                    <wm-filter-field name="jobTitle" field="jobTitle" related-field="Job Title" widget="autocomplete" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchmode="startignorecase" inputtype="text" displayname="Job Title" key="jobTitle" placeholder="Enter value"></wm-filter-field> 
                                 </wm-gridcolumn> 
                                 <wm-gridcolumn name="gridcolumn2" columnwidth="6"> 
-                                    <wm-filter-field name="role" field="role" related-field="Role" widget="autocomplete" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchMode="startignorecase" inputtype="text" displayname="Role" key="role" placeholder="Enter value"></wm-filter-field> 
+                                    <wm-filter-field name="role" field="role" related-field="Role" widget="autocomplete" is-range="false" show="true" type="string" is-primary-key="false" generator="assigned" matchmode="startignorecase" inputtype="text" displayname="Role" key="role" placeholder="Enter value"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                         </wm-layoutgrid> 
@@ -39,7 +39,7 @@
                     </wm-livefilter> 
                     <wm-table title="Employees Details" dataset="bind:Widgets.liveFilterTwoColumn.result" navigation="None" name="twoColumnLFGrid" subheading="List of filtered Employees" iconclass="wi wi-account-box" nodatamessage="No records to display" loadingdatamsg="Please wait..."> 
                         <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" width="64px" generator="assigned" readonly="true" edit-widget-type="text" show="true"> 
-                            <img data-ng-src="{{row.getProperty('picurl')}}" alt="{{row.getProperty('picurl')}}" width="64px" class="img-thumbnail" data-ng-class=""> 
+                            <img [attr.data-ng-src]="row?.getProperty('picurl')" [attr.alt]="row?.getProperty('picurl')" width="64px" class="img-thumbnail" data-ng-class=""> 
                         </wm-table-column> 
                         <wm-table-column binding="empId" caption="Emp Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
                         <wm-table-column-group name="group1" caption="Personal details"> 

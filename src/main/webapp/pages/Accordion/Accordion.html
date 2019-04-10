@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="AccordionPageController" pagetitle="Accordion" name="page1"> 
+<wm-page pagetitle="Accordion" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -6,7 +6,7 @@
         <wm-page-content columnwidth="10" name="page_content1"> 
             <wm-container name="breadcrumbContainer" content="breadcrumbpartial"></wm-container> 
             <wm-accordion name="accordion1"> 
-                <wm-accordionpane name="accordionpane1" title="Primary Accordion Pane" subheading="class: &quot;panel-primary&quot;" iconclass="wi wi-account-circle" class="panel-primary" on-expand="accordionpane1Expand($event, $scope)"> 
+                <wm-accordionpane name="accordionpane1" title="Primary Accordion Pane" subheading="class: &quot;panel-primary&quot;" iconclass="wi wi-account-circle" class="panel-primary" on-expand="accordionpane1Expand($event, widget)"> 
                     <wm-liveform novalidate="false" errormessage="" title="User Info" iconclass="wi wi-edit" defaultmode="Edit" dataset="bind:Variables.HrdbUserData.dataSet" captionalign="left" captionposition="top" name="liveform1"> 
                         <wm-layoutgrid columns="2" name="layoutgrid2"> 
                             <wm-gridrow name="gridrow2"> 
@@ -28,7 +28,7 @@
                         </wm-layoutgrid> 
                         <wm-form-field name="userId" displayname="User Id" required="true" show="false" generator="identity" primary-key="true" key="userId" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field> 
                         <wm-form-action key="reset" class="form-reset btn-secondary" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true"></wm-form-action> 
-                        <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+                        <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true" action=""></wm-form-action> 
                     </wm-liveform> 
                 </wm-accordionpane> 
                 <wm-accordionpane name="accordionpane2" class="panel-info" iconclass="wi wi-account-box" subheading="class: &quot;panel-info&quot;" title="Info Accordion Pane" content="pagecontent"></wm-accordionpane> 

@@ -1,24 +1,21 @@
-Application.$controller("footerPageController", ["$scope", function($scope) {
-    "use strict";
+/* perform any action on widgets/variables within this block */
 
-    /* perform any action on widgets/variables within this block */
-    $scope.onPageReady = function() {
-        /*
-         * variables can be accessed through '$scope.Variables' property here
-         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
-         * $scope.Variables.loggedInUser.getData()
-         *
-         * widgets can be accessed through '$scope.Widgets' property here
-         * e.g. to get value of text widget named 'username' use following script
-         * '$scope.Widgets.username.datavalue'
-         */
-    };
+Partial.onReady = function () {
+    /*
+     * variables can be accessed through 'Partial.Variables' property here
+     * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+     * Partial.Variables.loggedInUser.getData()
+     *
+     * widgets can be accessed through 'Partial.Widgets' property here
+     * e.g. to get value of text widget named 'username' use following script
+     * 'Partial.Widgets.username.datavalue'
+     */
 
+};
 
-    $scope.scrollTopClick = function($event, $isolateScope) {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 'fast');
-    };
+Partial.scrollTopClick = function ($event, widget) {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 'fast');
+};
 
-}]);

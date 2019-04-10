@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="ProjectDetailPageController" pagetitle="Project Detail" name="page1"> 
+<wm-page pagetitle="Project Detail" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -95,7 +95,7 @@
                                         <wm-label margin="unset 0.5em" caption="Completed:" fontweight="bold" name="progressBarLabel"></wm-label> 
                                     </wm-gridcolumn> 
                                     <wm-gridcolumn columnwidth="10" name="gridcolumn28"> 
-                                        <wm-progress name="projectProgressBar" datavalue="60" type="default-striped" height="1.5em"></wm-progress> 
+                                        <wm-progress-bar name="projectProgressBar" datavalue="60" type="default-striped" height="1.5em"></wm-progress-bar> 
                                         <wm-label caption="Project completed in 60%. Remaining close the project, sign a contract and invoice." name="projectStatusLabel" class="small"></wm-label> 
                                     </wm-gridcolumn> 
                                 </wm-gridrow> 

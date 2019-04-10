@@ -1,9 +1,9 @@
-<wm-partial data-ng-controller="mailOutlookViewPageController" name="partial1"> 
+<wm-partial name="partial1"> 
     <wm-layoutgrid name="emailContentLayoutGrid"> 
         <wm-gridrow name="gridrow5"> 
             <wm-gridcolumn columnwidth="6" name="gridColumnOne" class="col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
                 <wm-icon name="icon1" iconclass="wi wi-featured-video" class="small"></wm-icon> 
-                <wm-label name="mailtimestamp" margin="0px unset" caption="bind:$parent.Widgets.messageList.selecteditem.birthdate | toDate: 'yyyy-MM-dd HH:mm'" class="small" padding="unset 0.5em"></wm-label> 
+                <wm-label name="mailtimestamp" margin="0px unset" caption="bind:App.activePage.Widgets.messageList.selecteditem.birthdate | toDate: 'yyyy-MM-dd HH:mm'" class="small" padding="unset 0.5em"></wm-label> 
             </wm-gridcolumn> 
             <wm-gridcolumn columnwidth="6" name="gridColumnTwo" horizontalalign="right" class="col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
                 <wm-button class="btn-default btn-sm" type="button" caption="Plug it" name="plugItButton" iconclass="fa fa-plug" hint="Plug this message"></wm-button> 
@@ -18,7 +18,7 @@
                 <wm-html name="emailbody" content="bind:Variables.messageContent.dataSet.dataValue.message">
                      bind:Variables.messageContent.dataSet.dataValue.message 
                 </wm-html> 
-                <wm-label name="senderName" fontweight="bold" caption="bind:$parent.Widgets.messageList.selecteditem.firstname + ' '+ $parent.Widgets.messageList.selecteditem.lastname"></wm-label> 
+                <wm-label name="senderName" fontweight="bold" caption="bind:App.activePage.Widgets.messageList.selecteditem.firstname + ' '+ App.activePage.Widgets.messageList.selecteditem.lastname"></wm-label> 
             </wm-gridcolumn> 
         </wm-gridrow> 
         <wm-gridrow name="gridrow8_1"> 

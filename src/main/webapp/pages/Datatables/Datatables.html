@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="DatatablesPageController" pagetitle="Datatables" name="page1"> 
+<wm-page pagetitle="Datatables" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -14,14 +14,14 @@
                     <wm-gridcolumn columnwidth="10" name="gridcolumn44"> 
                         <wm-table title="Employee List" dataset="bind:Variables.TableClass.dataSet" navigation="None" name="tableNoStyles" height="200" gridclass="" subheading="List of employees in the organization"> 
                             <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" readonly="true" show="true"> 
-                                <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" height="64px" class="" data-ng-class=""></wm-picture> 
+                                <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" height="64px" class="" data-ng-class=""></wm-picture> 
                             </wm-table-column> 
                             <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="lastname" caption="Lastname" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="jobTitle" caption="Job Title" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="city" caption="City" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="state" caption="State" type="string" widget-type="anchor" primary-key="false" generator="assigned" readonly="true" show="true"> 
-                                <wm-anchor caption="{{row.getProperty('state')}}" hyperlink="" class="" ng-class=""></wm-anchor> 
+                                <wm-anchor caption="bind:(row.getProperty('state'))" hyperlink="" class="" ng-class=""></wm-anchor> 
                             </wm-table-column> 
                             <wm-table-column binding="street" caption="Street" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="zip" caption="Zip" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
@@ -36,7 +36,7 @@
                     <wm-gridcolumn columnwidth="10" name="gridcolumn52_2"> 
                         <wm-table title="Employee List" dataset="bind:Variables.TableClass.dataSet" navigation="None" height="200" gridclass="table-bordered" name="tableBordered" subheading="List of employees in the organization"> 
                             <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" readonly="true" show="true"> 
-                                <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" height="64px" class="" data-ng-class=""></wm-picture> 
+                                <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" height="64px" class="" data-ng-class=""></wm-picture> 
                             </wm-table-column> 
                             <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="jobTitle" caption="Job Title" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
@@ -52,7 +52,7 @@
                     <wm-gridcolumn columnwidth="10" name="gridcolumn54_2"> 
                         <wm-table title="Employee List" dataset="bind:Variables.TableClass.dataSet" navigation="None" height="200" gridclass="table-striped" name="tableStriped" subheading="List of employees in the organization"> 
                             <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" readonly="true" show="true"> 
-                                <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" height="64px" class="" data-ng-class=""></wm-picture> 
+                                <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" height="64px" class="" data-ng-class=""></wm-picture> 
                             </wm-table-column> 
                             <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="jobTitle" caption="Job Title" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
@@ -68,7 +68,7 @@
                     <wm-gridcolumn columnwidth="10" name="gridcolumn56_2"> 
                         <wm-table title="Employee List" dataset="bind:Variables.TableClass.dataSet" navigation="None" height="200" gridclass="table-bordered table-striped" name="tableBorderedStriped" subheading="List of employees in the organization"> 
                             <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" readonly="true" show="true"> 
-                                <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" height="64px" class="" data-ng-class=""></wm-picture> 
+                                <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" height="64px" class="" data-ng-class=""></wm-picture> 
                             </wm-table-column> 
                             <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="jobTitle" caption="Job Title" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
@@ -82,9 +82,9 @@
                         <wm-label class="code" caption="Row Conditional Class" name="label15"></wm-label> 
                     </wm-gridcolumn> 
                     <wm-gridcolumn columnwidth="10" name="gridcolumn46"> 
-                        <wm-table title="Employee List" dataset="bind:Variables.TableClass.dataSet" navigation="None" height="200" gridclass="table-striped" name="tableColored" rowngclass="{'success':row.index%4 === 0, 'danger':row.index%4 === 1, 'warning':row.index%4 === 2, 'info':row.index%4 === 3}" subheading="List of employees in the organization"> 
+                        <wm-table title="Employee List" dataset="bind:Variables.TableClass.dataSet" navigation="None" height="200" gridclass="table-striped" name="tableColored" rowngclass="{'success':row.$index%4 === 0, 'danger':row.$index%4 === 1, 'warning':row.$index%4 === 2, 'info':row.$index%4 === 3}" subheading="List of employees in the organization"> 
                             <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" readonly="true" show="true"> 
-                                <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" height="64px" class="" data-ng-class=""></wm-picture> 
+                                <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" height="64px" class="" data-ng-class=""></wm-picture> 
                             </wm-table-column> 
                             <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="jobTitle" caption="Job Title" type="string" primary-key="false" generator="assigned" readonly="true" show="true"></wm-table-column> 
@@ -105,7 +105,7 @@
                                 <wm-table title="Employee List" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Basic" name="empSimpleViewGrid" iconclass="wi wi-assignment-ind" filtermode="search" subheading="List of employees in the organization" height="200"> 
                                     <wm-table-column binding="empId" caption="Emp Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
                                     <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"> 
-                                        <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" class="" data-ng-class=""></wm-picture> 
+                                        <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" class="" data-ng-class=""></wm-picture> 
                                     </wm-table-column> 
                                     <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
                                     <wm-table-column binding="lastname" caption="Lastname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
@@ -120,7 +120,7 @@
                                     <wm-table gridfirstrowselect="true" title="Employee List" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Pager" name="empdetailsBelowGrid" subheading="List of Employees in the Organization" iconclass="wi wi-account-circle" filtermode="multicolumn" height="200" multiselect="false" enablecolumnselection="false" radioselect="true" editmode="form"> 
                                         <wm-table-column binding="empId" caption="Emp Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" searchable="false" show="true"></wm-table-column> 
                                         <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" edit-widget-type="text" searchable="false" show="true" readonly="false"> 
-                                            <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" class="" data-ng-class=""></wm-picture> 
+                                            <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" class="" data-ng-class=""></wm-picture> 
                                         </wm-table-column> 
                                         <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" filterwidget="autocomplete" readonly="false"></wm-table-column> 
                                         <wm-table-column binding="lastname" caption="Lastname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" filterwidget="autocomplete" readonly="false"></wm-table-column> 
@@ -172,7 +172,7 @@
                                             </wm-gridrow> 
                                         </wm-layoutgrid> 
                                         <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" type="button" update-mode="true"></wm-form-action> 
-                                        <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action> 
+                                        <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true" action=""></wm-form-action> 
                                     </wm-liveform> 
                                 </wm-livetable> 
                             </wm-tabpane> 
@@ -180,7 +180,7 @@
                                 <wm-table title="Employee List" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Classic" name="multiSelectGrid" radioselect="false" multiselect="true" subheading="List of Employees in the Organization" iconclass="wi wi-perm-identity" height="200"> 
                                     <wm-table-column binding="empId" caption="Emp Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
                                     <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"> 
-                                        <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" class="" data-ng-class=""></wm-picture> 
+                                        <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" class="" data-ng-class=""></wm-picture> 
                                     </wm-table-column> 
                                     <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
                                     <wm-table-column binding="lastname" caption="Lastname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
@@ -226,7 +226,7 @@
                                 <wm-table editmode="quickedit" title="Employee List" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Basic" name="empQuickEditGrid" height="200" subheading="List of employees in the organization"> 
                                     <wm-table-column binding="empId" caption="Emp Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
                                     <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"> 
-                                        <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" class="" data-ng-class=""></wm-picture> 
+                                        <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" class="" data-ng-class=""></wm-picture> 
                                     </wm-table-column> 
                                     <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
                                     <wm-table-column binding="lastname" caption="Lastname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
@@ -239,7 +239,7 @@
                                 <wm-table editmode="inline" title="Employee List" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Classic" name="empInlineEditGrid" height="200" subheading="List of employees in the organization"> 
                                     <wm-table-column binding="empId" caption="Emp Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
                                     <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"> 
-                                        <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" class="" data-ng-class=""></wm-picture> 
+                                        <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" class="" data-ng-class=""></wm-picture> 
                                     </wm-table-column> 
                                     <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
                                     <wm-table-column binding="lastname" caption="Lastname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
@@ -247,8 +247,8 @@
                                     <wm-table-column binding="role" caption="Role" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
                                     <wm-table-column binding="city" caption="City" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
                                     <wm-table-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column> 
-                                    <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action> 
-                                    <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-table-row-action> 
+                                    <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false"></wm-table-row-action> 
+                                    <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow($event)"></wm-table-row-action> 
                                 </wm-table> 
                             </wm-tabpane> 
                             <wm-tabpane name="tabpane3" title="Form Below" paneicon="wi wi-receipt"> 
@@ -256,7 +256,7 @@
                                     <wm-table gridfirstrowselect="true" editmode="form" title="Employee List" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Classic" name="empFormBelowGrid" height="200" subheading="List of employees in the organization"> 
                                         <wm-table-column binding="empId" caption="Emp Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
                                         <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"> 
-                                            <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" class="" data-ng-class=""></wm-picture> 
+                                            <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" class="" data-ng-class=""></wm-picture> 
                                         </wm-table-column> 
                                         <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
                                         <wm-table-column binding="lastname" caption="Lastname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
@@ -342,7 +342,7 @@
                                     <wm-table gridfirstrowselect="true" editmode="dialog" title="Employee List" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Basic" name="empFormAsDialogGrid" height="200" subheading="List of employees in the organization"> 
                                         <wm-table-column binding="empId" caption="Emp Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
                                         <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"> 
-                                            <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" width="64px" class="" data-ng-class=""></wm-picture> 
+                                            <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" width="64px" class="" data-ng-class=""></wm-picture> 
                                         </wm-table-column> 
                                         <wm-table-column binding="firstname" caption="Firstname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
                                         <wm-table-column binding="lastname" caption="Lastname" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
@@ -351,8 +351,8 @@
                                         <wm-table-column binding="city" caption="City" type="string" primary-key="false" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
                                         <wm-table-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column> 
                                         <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-table-action> 
-                                        <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action> 
-                                        <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action> 
+                                        <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false"></wm-table-row-action> 
+                                        <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow($event)" disabled="false"></wm-table-row-action> 
                                     </wm-table> 
                                     <wm-liveform novalidate="false" errormessage="" title="Employee Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.HrdbEmployeeData.dataSet" captionalign="left" captionposition="top" name="liveform4_2"> 
                                         <wm-layoutgrid name="layoutgrid2" columns="2"> 
@@ -428,7 +428,7 @@
                         <wm-livetable formlayout="dialog" name="livegrid4"> 
                             <wm-table gridfirstrowselect="true" editmode="dialog" title="Employee List" dataset="bind:Variables.TableClass.dataSet" navigation="Basic" name="exampleTable" showheader="true" showrecordcount="true" showrowindex="true" exportformat="EXCEL,CSV" subheading="List of employees in the organization" enablecolumnselection="true"> 
                                 <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" generator="assigned" edit-widget-type="text" show="true" readonly="false"> 
-                                    <wm-picture picturesource="{{row.getProperty('picurl')}}" hint="{{row.getProperty('picurl')}}" height="64px" class="" data-ng-class=""></wm-picture> 
+                                    <wm-picture picturesource="bind:(row.getProperty('picurl'))" hint="bind:(row.getProperty('picurl'))" height="64px" class="" data-ng-class=""></wm-picture> 
                                 </wm-table-column> 
                                 <wm-table-column-group name="group1" caption="Personal Details"> 
                                     <wm-table-column binding="firstname" caption="Firstname" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
@@ -463,8 +463,8 @@
                             <wm-table-column binding="jobTitle" caption="Job Title" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
                             <wm-table-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-table-column> 
                             <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-table-action> 
-                            <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action> 
-                            <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action> 
+                            <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false"></wm-table-row-action> 
+                            <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow($event)" disabled="false"></wm-table-row-action> 
                         </wm-table> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 

@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="EmailInboxPageController" pagetitle="Email Inbox" name="page1"> 
+<wm-page pagetitle="Email Inbox" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -30,7 +30,7 @@
                             <wm-table title="" dataset="bind:Variables.mailInboxData.dataSet" navigation="Pager" name="inboxMailDataGrid" radioselect="false" showheader="false" multiselect="true" gridclass="table-striped table-hover" pagesize="10" searchlabel="Search email"> 
                                 <wm-table-column binding="name" caption="Name" type="string" width="15%" readonly="true" show="true"></wm-table-column> 
                                 <wm-table-column binding="messageLabel" caption="Message Label" type="string" widget-type="label" width="10%" textalignment="right" readonly="true" show="true"> 
-                                    <label class="label" data-ng-class="{'label-warning':row.messageLabel == 'Clients', 'label-danger':row.messageLabel == 'Documents', 'label-info':row.messageLabel == 'Adv'}">{{row.getProperty('messageLabel')}}</label> 
+                                    <label class="label" data-ng-class="{'label-warning':row.messageLabel == 'Clients', 'label-danger':row.messageLabel == 'Documents', 'label-info':row.messageLabel == 'Adv'}">{{row?.getProperty('messageLabel')}}</label> 
                                 </wm-table-column> 
                                 <wm-table-column binding="message" caption="Message" type="string" readonly="true" show="true"></wm-table-column> 
                                 <wm-table-column binding="customField" caption="Attachment" type="string" width="24px" readonly="true" searchable="false" show="true"> 

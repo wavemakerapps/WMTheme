@@ -1,4 +1,4 @@
-<wm-partial data-ng-controller="orderDetailsPageController" name="partial1"> 
+<wm-partial name="partial1"> 
     <wm-list template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="panel" dataset="bind:Variables.ordersList.dataSet" navigation="None" name="orderDetailsList" itemclass="list-group-item"> 
         <wm-listtemplate layout="inline" name="listtemplate2"> 
             <wm-layoutgrid name="layoutgrid7"> 
@@ -17,7 +17,7 @@
                 </wm-gridrow> 
                 <wm-gridrow name="gridrow11"> 
                     <wm-gridcolumn columnwidth="12" name="gridcolumn23"> 
-                        <wm-progress dataset="bind:Variables.ordersList.dataSet[$i].percentage" datavalue="bind:Variables.ordersList.dataSet[$i].progress" type="success" name="orderProgress" margin="unset unset 0px unset" height="6"></wm-progress> 
+                        <wm-progress-bar dataset="bind:Variables.ordersList.dataSet[$i].percentage" datavalue="bind:Variables.ordersList.dataSet[$i].progress" type="success" name="orderProgress" margin="unset unset 0px unset" height="6"></wm-progress-bar> 
                     </wm-gridcolumn> 
                 </wm-gridrow> 
             </wm-layoutgrid> 

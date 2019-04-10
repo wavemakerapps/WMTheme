@@ -1,10 +1,10 @@
 {
-  "basePath" : "${rest.github.basepath}",
+  "basePath" : "${github.basepath}",
   "tags" : [ {
     "description" : "Rest service swagger documentation",
     "name" : "RestServiceVirtualController"
   } ],
-  "host" : "${rest.github.host}",
+  "host" : "${github.host}",
   "paths" : {
     "/vmg/redcarpet/comments" : {
       "x-WM-TAG" : "RestServiceVirtualController",
@@ -43,11 +43,11 @@
         },
         "operationId" : "github_RestServiceVirtualController-invoke"
       },
-      "x-WM-COMPLETE_PATH" : "${rest.github.scheme}://${rest.github.host}${rest.github.basepath}/vmg/redcarpet/comments",
+      "x-WM-COMPLETE_PATH" : "${github.scheme}://${github.host}${github.basepath}/vmg/redcarpet/comments",
       "x-WM-RELATIVE_PATH" : ""
     }
   },
-  "schemes" : [ "${rest.github.scheme}" ],
+  "schemes" : [ "${github.scheme}" ],
   "swagger" : "2.0",
   "definitions" : {
     "RootResponse" : {

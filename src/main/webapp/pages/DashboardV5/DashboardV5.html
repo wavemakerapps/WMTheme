@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="DashboardV5PageController" pagetitle="Dashboard V 5" name="page1"> 
+<wm-page pagetitle="Dashboard V 5" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -131,13 +131,13 @@
                     <wm-gridcolumn columnwidth="12" name="gridcolumn30" padding="2em 0.5em unset 0.5em"> 
                         <wm-table title="" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="None" name="responsiveTable" spacing="normal" filtermode="multicolumn"> 
                             <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" width="64px" generator="assigned" readonly="true" searchable="false" show="true"> 
-                                <img data-ng-src="{{row.getProperty('picurl')}}" alt="{{row.getProperty('picurl')}}" class="img-rounded" data-ng-class=""> 
+                                <img [attr.data-ng-src]="row?.getProperty('picurl')" [attr.alt]="row?.getProperty('picurl')" class="img-rounded" data-ng-class=""> 
                             </wm-table-column> 
                             <wm-table-column binding="firstname" caption="Firstname" type="string" width="10%" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="lastname" caption="Lastname" type="string" width="10%" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="jobTitle" caption="Job Title" type="string" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="customField" caption="email" type="string" readonly="true" mobiledisplay="false" searchable="false" show="true"> 
-                                <wm-anchor href="mailto:" iconclass="wi wi-email" caption="{{row.getProperty('firstname')+'.'+row.getProperty('lastname')+'@mobeteq.com'}}"></wm-anchor> 
+                                <wm-anchor iconclass="wi wi-email" caption="bind:(row.getProperty('firstname')+'.'+row.getProperty('lastname')+'@mobeteq.com')" hyperlink="mailto:"></wm-anchor> 
                             </wm-table-column> 
                             <wm-table-column binding="city" caption="City" type="string" width="20%" generator="assigned" readonly="true" show="true"></wm-table-column> 
                             <wm-table-column binding="state" caption="State" type="string" width="10%" generator="assigned" readonly="true" mobiledisplay="false" show="true"></wm-table-column> 

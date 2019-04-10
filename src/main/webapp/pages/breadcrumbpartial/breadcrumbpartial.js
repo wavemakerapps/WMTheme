@@ -1,27 +1,24 @@
-Application.$controller("breadcrumbpartialPageController", ["$scope", function($scope) {
-    "use strict";
+/* perform any action on widgets/variables within this block */
 
-    /* perform any action on widgets/variables within this block */
-    $scope.onPageReady = function() {
+Partial.onReady = function () {
+    /*
+     * variables can be accessed through 'Partial.Variables' property here
+     * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+     * Partial.Variables.loggedInUser.getData()
+     *
+     * widgets can be accessed through 'Partial.Widgets' property here
+     * e.g. to get value of text widget named 'username' use following script
+     * 'Partial.Widgets.username.datavalue'
+     */
 
-        /*
-         * variables can be accessed through '$scope.Variables' property here
-         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
-         * $scope.Variables.loggedInUser.getData()
-         *
-         * widgets can be accessed through '$scope.Widgets' property here
-         * e.g. to get value of text widget named 'username' use following script
-         * '$scope.Widgets.username.datavalue'
-         */
-        var catData = ($scope.pageParams.category === "ui") ? $scope.Variables.userInterfaceCategory.dataSet : $scope.Variables.widgetCategory.dataSet;
+    var catData = (Partial.pageParams.category === "ui") ? Partial.Variables.userInterfaceCategory.dataSet : Partial.Variables.widgetCategory.dataSet;
+    Partial.Variables.currentPageDetails.setData(_.find(catData, {
+        'link': '#/' + App.activePageName
+    }));
+    Partial.Variables.Breadcrumb.setItem(1, {
+        "pageName": Partial.Variables.currentPageDetails.dataSet.label,
+        "link": "#/" + Partial.Variables.currentPageDetails.dataSet.link
+    });
 
-        $scope.Variables.currentPageDetails.setData(_.find(catData, {
-            'link': '#/' + $scope.activePageName
-        }));
+};
 
-        $scope.Variables.Breadcrumb.setItem(1, {
-            "pageName": $scope.Variables.currentPageDetails.dataSet.label,
-            "link": "#/" + $scope.Variables.currentPageDetails.dataSet.link
-        });
-    };
-}]);

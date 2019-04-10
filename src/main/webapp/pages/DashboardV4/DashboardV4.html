@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="DashboardV4PageController" pagetitle="Dashboard V 4" name="page1"> 
+<wm-page pagetitle="Dashboard V 4" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -126,7 +126,7 @@
                             </wm-container> 
                             <wm-table title="" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="None" name="grid1"> 
                                 <wm-table-column binding="picurl" caption="Picurl" type="string" widget-type="image" width="64px" generator="assigned" readonly="true" edit-widget-type="text" show="true"> 
-                                    <img data-ng-src="{{row.getProperty('picurl')}}" alt="{{row.getProperty('picurl')}}" class="img-rounded" data-ng-class=""> 
+                                    <img [attr.data-ng-src]="row?.getProperty('picurl')" [attr.alt]="row?.getProperty('picurl')" class="img-rounded" data-ng-class=""> 
                                 </wm-table-column> 
                                 <wm-table-column binding="firstname" caption="Firstname" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true"></wm-table-column> 
                                 <wm-table-column binding="lastname" caption="Lastname" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true"></wm-table-column> 
